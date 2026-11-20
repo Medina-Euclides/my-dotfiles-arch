@@ -1,0 +1,4 @@
+brave-bin
+wlogout
+yay
+yay-debug
