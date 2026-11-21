@@ -1,0 +1,56 @@
+* {
+  font-family: "JetBrainsMono Nerd Font", "Adwaita Sans", sans-serif;
+  font-size: 13px;
+}
+
+window#waybar {
+  background-color: #1e1e2e;
+  color: #ffffff;
+}
+
+#clock,
+#hardware,
+#network,
+#pulseaudio,
+#battery,
+#backlight {
+  padding: 0 10px;
+  margin: 4px;
+}
+
+#clock {
+  color: #89b4fa;
+}
+
+#battery {
+  color: #a6e3a1;
+}
+
+/* Espaciado interno entre los elementos dentro de la píldora #hardware */
+#cpu,
+#temperature,
+#memory {
+  padding: 0 6px;
+}
+
+#workspaces button {
+  color: #cdd6f4;
+  padding: 0;
+  border-radius: 50%;
+  min-height: 24px;
+  min-width: 24px;
+  margin: 3px 3px;
+}
+
+#workspaces button.active {
+  color: #89b4fc;
+  background-color: #313244;
+  border-radius: 100px;
+}
+
+#workspaces button:hover {
+  /*background: transparent;*/
+  background-image: none;
+  box-shadow: none;
+  text-shadow: none;
+}

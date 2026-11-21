@@ -14,7 +14,7 @@ for app in "${APPS[@]}"; do
         mkdir -p "$REPO/.config/$app"
         # -a: mantiene permisos y subcarpetas (como scripts/)
         # --delete: si borras un archivo en ~/.config, lo borra también del repo
-        rsync -av --delete "$HOME/.config/$app/" "$REPO/.config/$app/"
+        rsync -av --delete --exclude='*.log' --exclude='cache/' "$HOME/.config/$app/" "$REPO/.config/$app/"
         echo "  [OK] $app"
     fi
 done

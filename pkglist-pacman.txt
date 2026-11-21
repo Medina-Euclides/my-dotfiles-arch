@@ -28,7 +28,10 @@ nano
 networkmanager
 noto-fonts-emoji
 ntfs-3g
+opencode
+openssh
 os-prober
+pavucontrol
 pipewire
 pipewire-pulse
 reflector
