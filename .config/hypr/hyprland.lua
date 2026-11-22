@@ -92,18 +92,18 @@ hl.env("HYPRCURSOR_SIZE", "24")
 -- Refer to https://wiki.hypr.land/configuring/core/config-options/
 hl.config({
     general = {
-        gaps_in  = 5,
-        gaps_out = 20,
+        gaps_in  = 4,
+        gaps_out = 5,
 
-        border_size = 2,
+        -- border_size = 1,
 
         col = {
-            active_border   = { colors = {"rgba(33ccffee)", "rgba(00ff99ee)"}, angle = 45 },
-            inactive_border = "rgba(595959aa)",
+            active_border = "rgba(0DB7D455)",
+            inactive_border = "rgba(31313600)"
         },
 
         -- Set to true to enable resizing windows by clicking and dragging on borders and gaps
-        resize_on_border = false,
+        resize_on_border = true,
 
         -- Please see https://wiki.hypr.land/configuring/extra/tearing/ before you turn this on
         allow_tearing = false,
@@ -112,7 +112,7 @@ hl.config({
     },
 
     decoration = {
-        rounding       = 10,
+        rounding       = 8,
         rounding_power = 2,
 
         -- Change transparency of focused and unfocused windows
@@ -120,14 +120,14 @@ hl.config({
         inactive_opacity = 1.0,
 
         shadow = {
-            enabled      = true,
+            enabled      = false,
             range        = 4,
             render_power = 3,
             color        = 0xee1a1a1a,
         },
 
         blur = {
-            enabled   = true,
+            enabled   = false,
             size      = 3,
             passes    = 1,
             vibrancy  = 0.1696,
@@ -255,6 +255,11 @@ hl.gesture({
     fingers = 4,
     direction = "horizontal",
     action = "workspace"
+})
+hl.gesture({
+    fingers = 3,
+    direction = "swipe",
+    action = "move"
 })
 
 -- Example per-device config
