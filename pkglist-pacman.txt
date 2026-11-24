@@ -1,5 +1,6 @@
 alsa-firmware
 alsa-utils
+awww
 base
 base-devel
 brightnessctl
@@ -8,12 +9,15 @@ dhcpcd
 efibootmgr
 fastfetch
 firefox
+fnm
 fuzzel
 gnu-free-fonts
 greetd
 greetd-tuigreet
 grub
 hyprland
+hyprshot
+imagemagick
 iwd
 kitty
 less
@@ -35,8 +39,11 @@ pavucontrol
 pipewire
 pipewire-pulse
 reflector
+rofi
 rsync
 sof-firmware
+swaync
+thunar
 ttf-hack
 ttf-inconsolata
 ttf-jetbrains-mono-nerd

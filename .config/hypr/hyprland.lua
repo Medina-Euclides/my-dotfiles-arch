@@ -36,7 +36,7 @@ hl.monitor({
 
 -- Set programs that you use
 local terminal    = "kitty"
-local fileManager = "dolphin"
+local fileManager = "thunar"
 local menu        = "hyprlauncher"
 
 
@@ -53,6 +53,8 @@ hl.on("hyprland.start", function ()
   -- hl.exec_cmd(terminal)
   -- hl.exec_cmd("nm-applet")
   hl.exec_cmd("waybar")
+  hl.exec_cmd("awww-daemon")
+  hl.exec_cmd("swaync")
 end)
 
 
@@ -327,10 +329,22 @@ hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = tr
 hl.bind("XF86AudioPlay",  hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = true })
 
---mis atajos personales
+-- Mis atajos personales
 hl.bind(mainMod .. " + space", hl.dsp.exec_cmd("fuzzel"))
+hl.bind("CTRL + " .. mainMod .. " + T", hl.dsp.exec_cmd("~/.config/rofi/rofi-wall.sh"))
 
+-- manejo de ventanas
+hl.bind("SUPER + D", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }),
+    { description = "Window: Maximize" })
+hl.bind("SUPER + F", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }),
+    { description = "Window: Fullscreen" })
 
+-- Captura de pantallas
+hl.bind("Print", hl.dsp.exec_cmd("hyprshot -m output --clipboard-only"))
+
+hl.bind("SHIFT + " .. mainMod .. " + S", hl.dsp.exec_cmd("hyprshot -m region --clipboard-only"))
+
+hl.bind("CTRL + Print", hl.dsp.exec_cmd("hyprshot -m window --clipboard-only"))
 
 --------------------------------
 ---- WINDOWS AND WORKSPACES ----
